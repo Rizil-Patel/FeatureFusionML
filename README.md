@@ -13,7 +13,7 @@ tasks.
 
 # Data Preprocessing:
 
-1)Converted the .xlsx dataset to .csv format. 
+1)Converted the .xlsx dataset to .csv format. /n
 2)Downloaded and saved images from the dataset. 
 3)Preprocessed the images by resizing and converting them to grayscale.
 

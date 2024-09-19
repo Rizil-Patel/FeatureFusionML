@@ -1,54 +1,43 @@
-Image Processing and Feature Extraction with ResNet50
-Overview
+#Image Processing and Feature Extraction with ResNet50
+#Overview
 This project utilizes a combination of deep learning, OCR, and machine learning techniques to process images, extract features, and predict entity attributes. The pipeline includes image preprocessing, feature extraction using ResNet50, text extraction with EasyOCR, and the application of Random Forest models for regression and classification tasks.
 
-Workflow
-Data Preprocessing:
+#Workflow
+#Data Preprocessing:
 
-Converted the .xlsx dataset to .csv format.
-Downloaded and saved images from the dataset.
-Preprocessed the images by resizing and converting them to grayscale.
-Text Extraction:
+1)Converted the .xlsx dataset to .csv format.
+2)Downloaded and saved images from the dataset.
+3)Preprocessed the images by resizing and converting them to grayscale.
 
-Applied EasyOCR to extract text from the images.
-Processed and filtered important content from the OCR results.
-Feature Extraction:
+#Text Extraction:
 
-Leveraged ResNet50 (a pre-trained CNN model) to extract image features.
-Performed feature engineering to reduce the dimensionality of the feature set.
-Modeling:
+1)Applied EasyOCR to extract text from the images.
+2)Processed and filtered important content from the OCR results.
 
-Combined image features and text data into a unified dataset.
-Implemented Random Forest Regression to predict entity_value (e.g., weight).
-Applied Random Forest Classification to predict the unit of the entity value (e.g., gram, kilogram).
-Evaluation:
+#Feature Extraction:
 
-Achieved a Mean Squared Error (MSE) of 2.4567 for the regression model.
-The classification model attained an accuracy of 64.67%.
-Setup
-Prerequisites
-Python 3.x
-Install the dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Run the Project
-Download Images: Use the following script to download images from the dataset:
+1)Leveraged ResNet50 (a pre-trained CNN model) to extract image features.
+2)Performed feature engineering to reduce the dimensionality of the feature set.
 
-bash
-Copy code
-python download_images.py
-Main Processing: Execute the main script for processing the data, extracting features, and training the models:
+#Modeling:
 
-bash
-Copy code
-python main.py
-Model Details
-ResNet50: Pre-trained Convolutional Neural Network used for feature extraction from images.
-EasyOCR: Optical Character Recognition (OCR) tool for text extraction.
-Random Forest Models: Applied for both regression and classification:
-Regression to predict entity_value.
-Classification to predict the unit (e.g., grams, kilograms).
-Results
-MSE for the Random Forest regression model: 2.4567
-Accuracy for the Random Forest classification model: 64.67%
+1)Combined image features and text data into a unified dataset.
+2)Implemented Random Forest Regression to predict entity_value (e.g., weight).
+3)Applied Random Forest Classification to predict the unit of the entity value (e.g., gram, kilogram).
+
+#Evaluation:
+
+1)Achieved a Mean Squared Error (MSE) of 2.4567 for the regression model.
+2)The classification model attained an accuracy of 64.67%.
+
+#Model Details
+
+1)ResNet50: Pre-trained Convolutional Neural Network used for feature extraction from images.
+2)EasyOCR: Optical Character Recognition (OCR) tool for text extraction.
+3)Random Forest Models: Applied for both regression and classification:
+4)Regression to predict entity_value.
+5)Classification to predict the unit (e.g., grams, kilograms).
+
+#Results
+1)MSE for the Random Forest regression model: 2.4567
+2)Accuracy for the Random Forest classification model: 64.67%
